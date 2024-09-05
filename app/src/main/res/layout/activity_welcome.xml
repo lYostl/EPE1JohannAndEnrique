@@ -10,18 +10,9 @@
         android:id="@+id/welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome!"
+        android:text="HOLAAA"
         android:textSize="24sp"
         android:gravity="center"
         android:textColor="@android:color/black" />
-    
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        android:backgroundTint="@android:color/holo_green_dark"
-        android:textColor="@android:color/white"
-        android:padding="12dp" />
 
 </LinearLayout>

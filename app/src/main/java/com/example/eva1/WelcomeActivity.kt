@@ -19,12 +19,8 @@ class WelcomeActivity : AppCompatActivity() {
         val username = intent.getStringExtra("USERNAME")
 
         // Mostrar un mensaje de bienvenida personalizado
-        welcomeMessageTextView.text = "Bienvenido, $username!"
+        welcomeMessageTextView.text = "HOLAAAAA, $username!"
 
-        // Funcionalidad del botón "Volver"
-        val backButton: Button = findViewById(R.id.btn_back)
-        backButton.setOnClickListener {
-            finish()  // Finaliza la actividad actual y regresa a la anterior
-        }
+
     }
 }
