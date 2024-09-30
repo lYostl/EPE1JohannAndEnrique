@@ -1,62 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/img">
 
     <TextView
         android:id="@+id/welcome_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLAAA"
-        android:textColor="@android:color/black"
-        android:textSize="24sp" />
+        android:text="Bienvenido"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/et_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:hint="Nombre"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:layout_marginTop="16dp" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/et_apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corner"
         android:hint="Apellido"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:layout_marginTop="16dp" />
+        android:padding="18dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/et_comuna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:hint="Comuna"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:layout_marginTop="16dp" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/et_observacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:hint="Observación"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corner"
+        android:padding="18dp"
         android:inputType="textMultiLine"
-        android:minHeight="48dp"
-        android:minLines="3"
-        android:layout_marginTop="16dp" />
+        android:minLines="3" />
 
     <Button
         android:id="@+id/btn_enviar_datos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:onClick="abrirGmail"
-        android:text="Enviar Datos" />
-
-
+        android:padding="12dp"
+        android:text="Enviar Datos"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
 </LinearLayout>
