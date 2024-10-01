@@ -6,7 +6,7 @@
     android:gravity="center"
     android:background="@drawable/img_3">
 
-    <!-- Campo de texto para el usuario -->
+
     <TextView
         android:id="@+id/welcome_message"
         android:layout_width="150dp"
@@ -14,6 +14,7 @@
         android:text="Registro"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
+
 
     <EditText
         android:id="@+id/et_usuario"
@@ -28,7 +29,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp" />
 
-    <!-- Campo de texto para la contraseña -->
+
+
     <EditText
         android:id="@+id/et_contrasena"
         android:layout_width="250dp"
@@ -42,7 +44,7 @@
         android:inputType="textPassword"
         android:layout_marginTop="16dp" />
 
-    <!-- Botón para guardar los datos -->
+
     <Button
         android:id="@+id/btn_guardar"
         android:layout_width="250dp"
@@ -50,10 +52,11 @@
         android:layout_marginTop="24dp"
         android:padding="12dp"
         android:text="Guardar"
-        android:textColor="@android:color/white"
+        android:backgroundTint="@color/white"
+        android:textColor="#3B84F1"
         android:textSize="20sp" />
 
-    <!-- Botón para volver -->
+
     <Button
         android:id="@+id/btn_volver"
         android:layout_width="250dp"
@@ -61,7 +64,8 @@
         android:layout_marginTop="16dp"
         android:padding="12dp"
         android:text="Volver"
-        android:textColor="@android:color/white"
+        android:backgroundTint="@color/white"
+        android:textColor="#3B84F1"
         android:textSize="18sp" />
 
 </LinearLayout>

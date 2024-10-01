@@ -11,10 +11,10 @@
     tools:context=".MainActivity">
 
  <LinearLayout
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
+     android:layout_width="395dp"
+     android:layout_height="590dp"
      android:gravity="center"
-     android:orientation="vertical" >
+     android:orientation="vertical">
 
   <ImageView
       android:layout_width="160dp"
@@ -22,17 +22,17 @@
       android:src="@drawable/baseline_account_circle_24" />
 
   <EditText
+      android:id="@+id/username_input"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="32dp"
+      android:background="@drawable/rounded_corner"
       android:hint="Usuario"
+      android:inputType="text"
+      android:padding="18dp"
       android:textColor="@color/white"
       android:textColorHint="@color/white"
-      android:textSize="20sp"
-      android:background="@drawable/rounded_corner"
-      android:padding="18dp"
-      android:inputType="text"
-      android:id="@+id/username_input" />
+      android:textSize="20sp" />
 
   <EditText
       android:id="@+id/password_input"
@@ -48,14 +48,14 @@
       android:textSize="20sp" />
 
   <Button
+      android:id="@+id/Login_btn"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Ingresar"
-      android:backgroundTint="@color/white"
-      android:textColor="#3B84F1"
-      android:textSize="20sp"
-      android:padding="18dp"
       android:layout_margin="38sp"
-      android:id="@+id/Login_btn" />
+      android:backgroundTint="@color/white"
+      android:padding="18dp"
+      android:text="Ingresar"
+      android:textColor="#3B84F1"
+      android:textSize="20sp" />
  </LinearLayout>
 </RelativeLayout>

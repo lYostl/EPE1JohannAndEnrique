@@ -19,18 +19,20 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
 
-        // Obtener las referencias de los elementos desde el layout
+
+
         welcomeMessageTextView = findViewById(R.id.welcome_message)
         enviarDatosBtn = findViewById(R.id.btn_enviar_datos)
 
-        // Obtener el nombre de usuario desde el Intent
+
+
         val username = intent.getStringExtra("USERNAME")
         val apellido = intent.getStringExtra("APELLIDO")
         val comuna = intent.getStringExtra("COMUNA")
         val observacion = intent.getStringExtra("OBSERVACION")
 
         // Mostrar un mensaje de bienvenida personalizado
-        welcomeMessageTextView.text = "Hola, $username!"
+        welcomeMessageTextView.text = "Bienvenido, $username!"
 
         val nombreEditText = findViewById<EditText>(R.id.et_nombre)
         val apellidoEditText = findViewById<EditText>(R.id.et_apellido)
@@ -38,7 +40,7 @@ class WelcomeActivity : AppCompatActivity() {
         val observacionEditText = findViewById<EditText>(R.id.et_observacion)
 
         enviarDatosBtn.setOnClickListener {
-            val recipient = "angeloc935115@gmail.com" // Cambia esto al correo deseado o deja vacío si es para probar
+            val recipient = "angeloc935115@gmail.com"
             val subject = "Datos del Usuario"
             val message = """
                 Nombre: ${nombreEditText.text.toString().trim()}

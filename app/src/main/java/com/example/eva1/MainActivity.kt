@@ -1,5 +1,6 @@
 package com.example.eva1
 
+import DBHelper
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -13,23 +14,28 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var usernameInput : EditText
-    lateinit var passwordInput : EditText
-    lateinit var loginBtn : Button
+    lateinit var usernameInput: EditText
+    lateinit var passwordInput: EditText
+    lateinit var loginBtn: Button
+    lateinit var dbHelper: DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        dbHelper = DBHelper(this)
+
+        // Inicializar los elementos de la interfaz
+        usernameInput = findViewById(R.id.username_input)
+        passwordInput = findViewById(R.id.password_input)
+        loginBtn = findViewById(R.id.Login_btn)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        usernameInput = findViewById(R.id.username_input)
-        passwordInput = findViewById(R.id.password_input)
-        loginBtn = findViewById(R.id.Login_btn)
 
         loginBtn.setOnClickListener {
             val username = usernameInput.text.toString()
@@ -38,18 +44,21 @@ class MainActivity : AppCompatActivity() {
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "Por favor, ingresa tanto el nombre de usuario como la contraseña", Toast.LENGTH_LONG).show()
             } else {
-                Log.i("Prueba", "Usuario:  $username y Clave es $password")
-                Toast.makeText(this, "Hola, $username", Toast.LENGTH_LONG).show()
+                if (dbHelper.validateUser(username, password)) {
+                    Toast.makeText(this, "Bienvenido, $username", Toast.LENGTH_LONG).show()
 
-                // Crear un Intent para iniciar la WelcomeActivity
-                val intent = Intent(this, WelcomeActivity::class.java)
-
-                // Pasar el nombre de usuario a la WelcomeActivity
-                intent.putExtra("USERNAME", username)
-
-                // Iniciar la nueva actividad
-                startActivity(intent)
+                    Log.d("MainActivity", "Iniciando MenuActivity")
+                    val intent = Intent(this, MenuActivity::class.java)
+                    intent.putExtra("USERNAME", username)
+                    startActivity(intent)
+                } else {
+                    Toast.makeText(this, "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show()
+                }
             }
         }
+
     }
 }
+
+
+

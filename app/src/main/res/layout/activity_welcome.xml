@@ -75,7 +75,8 @@
         android:onClick="abrirGmail"
         android:padding="12dp"
         android:text="Enviar Datos"
-        android:textColor="@android:color/black"
+        android:backgroundTint="@color/white"
+        android:textColor="#3B84F1"
         android:textSize="18sp" />
 
 </LinearLayout>
