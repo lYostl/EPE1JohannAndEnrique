@@ -1,6 +1,4 @@
 package com.example.eva1
-
-import DBHelper
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log

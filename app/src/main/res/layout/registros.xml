@@ -6,7 +6,6 @@
     android:gravity="center"
     android:background="@drawable/img_3">
 
-
     <TextView
         android:id="@+id/welcome_message"
         android:layout_width="150dp"
@@ -14,7 +13,6 @@
         android:text="Registro"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
-
 
     <EditText
         android:id="@+id/et_usuario"
@@ -29,8 +27,6 @@
         android:inputType="text"
         android:layout_marginTop="16dp" />
 
-
-
     <EditText
         android:id="@+id/et_contrasena"
         android:layout_width="250dp"
@@ -44,7 +40,6 @@
         android:inputType="textPassword"
         android:layout_marginTop="16dp" />
 
-
     <Button
         android:id="@+id/btn_guardar"
         android:layout_width="250dp"
@@ -55,6 +50,30 @@
         android:backgroundTint="@color/white"
         android:textColor="#3B84F1"
         android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:text="Eliminar"
+        android:backgroundTint="@color/white"
+        android:textColor="#3B84F1"
+        android:textSize="18sp" />
+
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:text="Editar"
+        android:backgroundTint="@color/white"
+        android:textColor="#3B84F1"
+        android:textSize="18sp" />
 
 
     <Button

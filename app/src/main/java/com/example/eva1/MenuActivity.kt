@@ -9,19 +9,18 @@ class MenuActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu) // Asegúrate de que este layout exista
-
+        setContentView(R.layout.menu)
         val irFormularioBtn = findViewById<Button>(R.id.btn_ir_formulario)
         val registroBtn = findViewById<Button>(R.id.btn_registro)
 
         irFormularioBtn.setOnClickListener {
-            // Redirigir a WelcomeActivity
+
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
         }
 
         registroBtn.setOnClickListener {
-            // Redirigir a RegistroActivity
+
             val intent = Intent(this, RegistroActivity::class.java)
             startActivity(intent)
         }

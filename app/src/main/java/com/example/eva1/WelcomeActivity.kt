@@ -31,7 +31,7 @@ class WelcomeActivity : AppCompatActivity() {
         val comuna = intent.getStringExtra("COMUNA")
         val observacion = intent.getStringExtra("OBSERVACION")
 
-        // Mostrar un mensaje de bienvenida personalizado
+
         welcomeMessageTextView.text = "Bienvenido, $username!"
 
         val nombreEditText = findViewById<EditText>(R.id.et_nombre)
